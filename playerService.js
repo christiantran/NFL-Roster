@@ -1,30 +1,14 @@
 function PlayersService(callback){
     var playersData = [];
    
-    var loading = true;
+   /* var loading = true;
 var playerService = new PlayerService(ready);
 
 function ready(){
     loading = false;
-    }
-}
+    }*/
 
-    this.getPlayersByTeam = function(teamName){
-        //return an array of all players who match the given teamName.
-        this.getPlayersByTeam = function(teamName){
-            return playersData.filter(function(player){
-              if(player.team == teamName){
-                return true;
-              }
-            });
-          }
-      }
-    
-      this.getPlayersByPosition = function(position){
-        //return an array of all players who match the given position.
-      }
-
-
+  var myTeam = []; // User team
     
      function loadPlayersData(){
        //check if the player already has a copy of the NFL playersData
@@ -49,6 +33,22 @@ function ready(){
            console.log('Finished Writing Player Data to localStorage')
            callback()
          });
-     }    
+     }   
+     
+     this.getPlayersByTeam = function(teamName){
+        //return an array of all players who match the given teamName.
+        this.getPlayersByTeam = function(teamName){
+            return playersData.filter(function(player){
+              if(player.team == teamName){
+                return true;
+              }
+            });
+          }
+      }
+    
+      this.getPlayersByPosition = function(position){
+        //return an array of all players who match the given position.
+      }
+
  loadPlayersData(); //call the function above every time we create a new service
  } 

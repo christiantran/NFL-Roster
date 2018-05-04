@@ -18,6 +18,25 @@
     <section class="container-fluid">
 
         <div class="row">
+
+            <div class="col" id="nflPlayers">
+
+                <form class="form-inline" onsubmit="controller.playerController.search(event)" id="">
+                    <div class="form-group mb-5">
+                        <input type="text" class="form-control" name="player" placeholder="Player Name" />
+                        <button type="submit" class="btn btn-danger" id="get-player-button">Search</button>
+                    </div>
+                </form>
+                <h1>NFL Players</h1>
+                <div>
+                    <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt "">
+                    <h1>Name</h1>
+                    <p>Position</p>
+                    <p>Team</p>
+                    <button>Add to team</button>
+                </div>
+            </div>
+
             <div class="col" id="myTeam">
                 <div class="player-card">
                     <h1>My Team</h1>
@@ -25,16 +44,6 @@
                 </div>
             </div>
 
-            <div class="col" id="nflPlayers">
-                <h1>NFL Players</h1>
-                <!-- <div>
-              <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/">
-              <h1>Name</h1>
-              <p>Position</p>
-              <p>Team</p>
-              <button>Add to team</button>
-            </div> -->
-            </div>
         </div>
 
     </section>

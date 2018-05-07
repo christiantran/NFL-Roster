@@ -1,0 +1,14 @@
+body {
+    background-image: url(/styles/nfl.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.heading-text {
+    color: red;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.search-font {
+    font-family: 'Playfair Display SC', serif;
+}

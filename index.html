@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 
     <title>NFL Roster</title>
 
@@ -17,31 +18,29 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-11 offset-1">
-
+            <div class="col offset-1 mt-2 mb-5 center">
                 <form class="form-inline" onsubmit="app.controllers.playerController.search(event)">
-                    <div class="form-group mb-5">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="player" placeholder="Player Name" />
-                        <button type="submit" class="btn btn-primary" id="search-name">Search</button>
+                        <button type="submit" class="btn btn-danger search-font" id="search-name">Search</button>
                     </div>
-                    <div class="form-group mb-5">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="position" placeholder="Postion" />
-                        <button type="submit" class="btn btn-primary" id="search-position">Search</button>
+                        <button type="submit" class="btn btn-danger search-font" id="search-position">Search</button>
                     </div>
-                    <div class="form-group mb-5">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="team" placeholder="Team" />
-                        <button type="submit" class="btn btn-primary" id="search-team">Search</button>
+                        <button type="submit" class="btn btn-danger search-font" id="search-team">Search</button>
                     </div>
                 </form>
             </div>
         </div>
+
         <div class="row">
-            <div class="col" id="nflPlayers">
-                <h1>NFL Players</h1>
+            <div class="col-6 heading-text text-left" id="nflPlayers">
+                <h1>NFL List</h1>
             </div>
-            <div class="col" id="myTeam">
-            </div>
-            <div class="player-card">
+            <div class="col-6 heading-text text-right" id="myTeam">
                 <h1>My Team</h1>
             </div>
         </div>

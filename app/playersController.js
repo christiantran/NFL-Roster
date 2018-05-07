@@ -12,7 +12,7 @@ function PlayerController() {
     <h1>Name: ${player.fullname}</h1>
     <p>Position: ${player.position}</p>
     <p>Team: ${player.pro_team}</p>
-    <button class="btn btn-primary" onclick="app.controllers.playerController.addToTeam('${player.id}')">Add to team</button>
+    <button class="btn btn-light" onclick="app.controllers.playerController.addToTeam('${player.id}')">Add to team</button>
     </div>
     `;
         }
@@ -29,7 +29,7 @@ function PlayerController() {
     <h1>Name: ${player.fullname}</h1>
     <p>Position: ${player.position}</p>
     <p>Team: ${player.pro_team}</p>
-    <button onclick="app.controllers.playerController.removeFromTeam(${player.id})">Remove from team</button>
+    <button class="btn btn-light" onclick="app.controllers.playerController.removeFromTeam(${player.id})">Remove from team</button>
     </div>
     `;
         }

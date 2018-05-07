@@ -15,38 +15,39 @@
 
 <body>
 
-    <section class="container-fluid">
-
+    <section class="container">
         <div class="row">
+            <div class="col-11 offset-1">
 
-            <div class="col" id="nflPlayers">
-
-                <form class="form-inline" onsubmit="controller.playerController.search(event)" id="">
+                <form class="form-inline" onsubmit="app.controllers.playerController.search(event)">
                     <div class="form-group mb-5">
                         <input type="text" class="form-control" name="player" placeholder="Player Name" />
-                        <button type="submit" class="btn btn-danger" id="get-player-button">Search</button>
+                        <button type="submit" class="btn btn-primary" id="search-name">Search</button>
+                    </div>
+                    <div class="form-group mb-5">
+                        <input type="text" class="form-control" name="position" placeholder="Postion" />
+                        <button type="submit" class="btn btn-primary" id="search-position">Search</button>
+                    </div>
+                    <div class="form-group mb-5">
+                        <input type="text" class="form-control" name="team" placeholder="Team" />
+                        <button type="submit" class="btn btn-primary" id="search-team">Search</button>
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="nflPlayers">
                 <h1>NFL Players</h1>
-               <!-- <div>
-                    <img src="" alt "">
-                    <h1>Name</h1>
-                    <p>Position</p>
-                    <p>Team</p>
-                    <button>Add to team</button>
-                </div>-->
             </div>
-
             <div class="col" id="myTeam">
-                <div class="player-card">
-                    <h1>My Team</h1>
-
-                </div>
             </div>
-
+            <div class="player-card">
+                <h1>My Team</h1>
+            </div>
         </div>
 
     </section>
+
 
 
 
@@ -56,13 +57,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- SERVICES -->
-    <script src="playerService.js"></script>
+    <script src="app/playersService.js"></script>
 
     <!-- CONTROLLERS -->
-    <script src="playerController.js"></script>
+    <script src="app/playersController.js"></script>
 
     <!-- APP -->
-    <script src="app.js"></script>
+    <script src="app/app.js"></script>
 </body>
 
 </html>

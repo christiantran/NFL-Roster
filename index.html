@@ -17,23 +17,29 @@
 <body>
 
     <section class="container">
+
         <div class="row">
+            <div class="col heading-text mt-3 mb-5">
+                <h1>Fantasy Football League</h1>
+            </div>
+            <div class="col">
+                <form class="form-inline mb-5" onsubmit="app.controllers.playerController.search(event)">
+                    <!--<label class="sr-only" for="inlineFormInputName2">Name</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">-->
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">Name</option>
+                        <option value="2">Position</option>
+                        <option value="3">Team</option>
+                    </select>
 
-                <form class="form-inline" onsubmit="app.controllers.playerController.search(event)">
-                        <label class="sr-only" for="inlineFormInputName2">Name</label>
-                        <!--<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">-->
-                        <input type="text" name="query" placeholder="Player Name" id="search-button"/>
-                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                  <option selected>Choose...</option>
-                                  <option value="1">Name</option>
-                                  <option value="2">Position</option>
-                                  <option value="3">Team</option>
-                                </select>
-                      
-                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                      </form>
+                    <input type="text" name="query" placeholder="Name, Position, Team" id="search-button" />
 
-            <!--<div class="col-4">
+                    <button type="submit" class="btn btn-outline-light mb-3 mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--<div class="col-4">
                 <form class="search" onsubmit="app.controllers.playerController.search(event)">
                         <input type="text" name="query" placeholder="Player Name" id="search-button"/>
                         <button type="submit" class="btn btn-danger search-font">Search</button>
@@ -57,11 +63,11 @@
         </div>-->
 
         <div class="row">
-            <div class="col-6 heading-text text-left" id="nflPlayers">
-                <h1>NFL List</h1>
+            <div class="col-6 heading-text mb-5" id="nflPlayers">
+                <h2>NFL List</h2>
             </div>
-            <div class="col-6 heading-text text-right" id="myTeam">
-                <h1>My Team</h1>
+            <div class="col-6 heading-text text-right mb-5" id="myTeam">
+                <h2>My Team</h2>
             </div>
         </div>
 

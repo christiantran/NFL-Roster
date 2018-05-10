@@ -7,14 +7,17 @@ function PlayerController() {
         for (let i = 0; i < players.length; i++) {
             const player = players[i];
             template += `
-            <div>
-    <img src="${player.photo}" alt="">
-    <h1>${player.fullname}</h1>
-    <p>${player.position}</p>
-    <p>${player.pro_team}</p>
-    <button class="btn btn-light" onclick="app.controllers.playerController.addToTeam(${player.id})">Add to team</button>
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <img class="card-img-top" src="${player.photo}" alt="Card image cap">
+    <h1 class="card-title">${player.fullname}</h1>
+    <p class="card-text">${player.position}</p>
+    <p class="card-text">${player.pro_team}</p>
+    <button class="btn btn-outline-danger" onclick="app.controllers.playerController.addToTeam(${player.id})">Add to team</button>
+    </div>
     </div>
     `;
+            //<a href="#" class="btn btn-primary">Go somewhere</a>
         }
         document.getElementById("nflPlayers").innerHTML = template;
     }
@@ -24,12 +27,14 @@ function PlayerController() {
         for (let i = 0; i < players.length; i++) {
             const player = players[i];
             template += `
-            <div>
-    <img src="${player.photo}" alt="">
-    <h1>Name: ${player.fullname}</h1>
-    <p>Position: ${player.position}</p>
-    <p>Team: ${player.pro_team}</p>
-    <button class="btn btn-light" onclick="app.controllers.playerController.removeFromTeam(${player.id})">Remove from team</button>
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <img class="card-img-top" src="${player.photo}" alt="Card image cap">
+    <h1 class="card-title">${player.fullname}</h1>
+    <p class="card-text">${player.position}</p>
+    <p class="card-text">${player.pro_team}</p>
+    <button class="btn btn-outline-danger" onclick="app.controllers.playerController.removeFromTeam(${player.id})">Remove from team</button>
+    </div>
     </div>
     `;
         }

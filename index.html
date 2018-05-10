@@ -18,23 +18,43 @@
 
     <section class="container">
         <div class="row">
-            <div class="col offset-1 mt-2 mb-5 center">
+
                 <form class="form-inline" onsubmit="app.controllers.playerController.search(event)">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="player" placeholder="Player Name" />
-                        <button type="submit" class="btn btn-danger search-font" id="search-name">Search</button>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="position" placeholder="Postion" />
-                        <button type="submit" class="btn btn-danger search-font" id="search-position">Search</button>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="team" placeholder="Team" />
-                        <button type="submit" class="btn btn-danger search-font" id="search-team">Search</button>
+                        <label class="sr-only" for="inlineFormInputName2">Name</label>
+                        <!--<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">-->
+                        <input type="text" name="query" placeholder="Player Name" id="search-button"/>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                  <option selected>Choose...</option>
+                                  <option value="1">Name</option>
+                                  <option value="2">Position</option>
+                                  <option value="3">Team</option>
+                                </select>
+                      
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                      </form>
+
+            <!--<div class="col-4">
+                <form class="search" onsubmit="app.controllers.playerController.search(event)">
+                        <input type="text" name="query" placeholder="Player Name" id="search-button"/>
+                        <button type="submit" class="btn btn-danger search-font">Search</button>
+                </form>
+            </div>
+
+            <div class="col-4">
+                <form class="search" onsubmit="app.controllers.playerController.search(event)">
+                        <input type="text" name="query" placeholder="Postion" id="search-button"/>
+                        <button type="submit" class="btn btn-danger search-font">Search</button>
+                </form>
+            </div>
+            
+            <div class="col-4">
+                <form class="search" onsubmit="app.controllers.playerController.search(event)"><div class="form-group">
+                        <input type="text" name="query" placeholder="Team" id="search-button"/>
+                        <button type="submit" class="btn btn-danger search-font">Search</button>
                     </div>
                 </form>
             </div>
-        </div>
+        </div>-->
 
         <div class="row">
             <div class="col-6 heading-text text-left" id="nflPlayers">

@@ -9,10 +9,10 @@ function PlayerController() {
             template += `
             <div>
     <img src="${player.photo}" alt="">
-    <h1>Name: ${player.fullname}</h1>
-    <p>Position: ${player.position}</p>
-    <p>Team: ${player.pro_team}</p>
-    <button class="btn btn-light" onclick="app.controllers.playerController.addToTeam('${player.id}')">Add to team</button>
+    <h1>${player.fullname}</h1>
+    <p>${player.position}</p>
+    <p>${player.pro_team}</p>
+    <button class="btn btn-light" onclick="app.controllers.playerController.addToTeam(${player.id})">Add to team</button>
     </div>
     `;
         }
@@ -44,11 +44,16 @@ function PlayerController() {
         playerService.removeFromTeam(id, drawMyTeam)
     };
 
-    this.search = function search(e){
-        e.preventDefault ();
+    /*this.search = function search(e) {
+        e.preventDefault();
         var name = e.target.player.value;
         playerService.getPlayersByName(name, drawPlayers)
+    };*/
+
+    this.search = function search(id) {
+        id.preventDefault();
+        var query = id.target.query.value
+        var results = playerService.search(query)
+        drawPlayers(results)
     }
-
-
 }
